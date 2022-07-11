@@ -4,3 +4,7 @@ This is an absolute bare bones starter to get wasm up and running locally. Quite
 Because you need index.html to bootstrap Javascript...
 *** Why index.js?
 Because you need index.js to bootstrap WebAssembly...
+*** Why the shell script?
+Because you need fetch to instantiate WebAssembly... And otherwise you're going to get a CORS error. Shell script just runs python3 simple http server. Don't forget to mark run as executable.
+*** Why not pipenv or virtual environment?
+I don't even want to use python, but everyone has simple http--why would I use flask/django or express or something like this?
