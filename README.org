@@ -1,0 +1,2 @@
+* WASM starter
+This is an absolute bare bones starter to get wasm up and running locally. Quite painful that an HTTP server is even needed to bootstrap web assembly, but it is what it is.
