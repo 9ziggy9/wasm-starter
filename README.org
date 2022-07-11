@@ -20,5 +20,7 @@ To compile your .wat file; wat2wasm hello.wat
 
 *** NOTES
 Note that if you are writing WebAssembly Text, you must use (export "nameOfFunction") in order to export said function to WASM instance. You can access your functions in the instantiate wasm object; wasm.instances.nameOfFunction -- here I use dereferencing for cleanliness.
+* Compiling C to WASM
+Makefile included has necessary flags, in this project WASM compiled C is built into wasm/main.wasm and interfaced in ./main.js. Note how C uses function prototype to use JS draw method on HTML5 canvas.
 * Big Picture
 This is the bare minimum needed to interface with WASM, strictly speaking, from here all one would need is a compiler for whatever language they are using to compile to WASM. I will include many examples for many different langauges shortly but first should come C with and without emscripten.
