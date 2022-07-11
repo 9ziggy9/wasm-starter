@@ -1,7 +1,7 @@
 typedef unsigned int u32;
 typedef int i32;
 
-#define FACTOR 100
+#define FACTOR 50
 #define WIDTH (16*FACTOR)
 #define HEIGHT (9*FACTOR)
 #define CELL_SIZE 100
