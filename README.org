@@ -15,3 +15,10 @@ I don't even want to use python, but everyone has simple http--why would I use f
 As previously stated, you will need some type of WebAssembly Text compiler, unless you want to write raw WebAssembly binary (nope). A popular choice is something called "wabt" (WebAssembly Binary Toolkit) which provides the "wat2wasm" compiler.
 - https://github.com/WebAssembly/wabt
 To compile your .wat file; wat2wasm hello.wat
+
+
+
+*** NOTES
+Note that if you are writing WebAssembly Text, you must use (export "nameOfFunction") in order to export said function to WASM instance. You can access your functions in the instantiate wasm object; wasm.instances.nameOfFunction -- here I use dereferencing for cleanliness.
+* Big Picture
+This is the bare minimum needed to interface with WASM, strictly speaking, from here all one would need is a compiler for whatever language they are using to compile to WASM. I will include many examples for many different langauges shortly but first should come C with and without emscripten.
