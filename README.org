@@ -8,3 +8,10 @@ Because you need index.js to bootstrap WebAssembly...
 Because you need fetch to instantiate WebAssembly... And otherwise you're going to get a CORS error. Shell script just runs python3 simple http server. Don't forget to mark run as executable.
 *** Why not pipenv or virtual environment?
 I don't even want to use python, but everyone has simple http--why would I use flask/django or express or something like this?
+* WebAssembly Jump Start
+- WebAssembly is a binary format... Not human readable assembly language, complete and total misnomer.
+- For human readable WebAssembly, we have "WebAssembly Text" which uses a lisp-like syntax (S-expressions) as a readable form of the binary instructions. No, I'm not kidding.
+*** How do I write raw WebAssembly?
+As previously stated, you will need some type of WebAssembly Text compiler, unless you want to write raw WebAssembly binary (nope). A popular choice is something called "wabt" (WebAssembly Binary Toolkit) which provides the "wat2wasm" compiler.
+- https://github.com/WebAssembly/wabt
+To compile your .wat file; wat2wasm hello.wat
